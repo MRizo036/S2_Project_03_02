@@ -1,4 +1,5 @@
 ﻿@charset "utf-8";
+/* The charset "utf-8" in the begining of the document defines the character encoding of the website similar to what the meta charset line does in an HTML document. */
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -14,55 +15,66 @@
 
 
 /* Structural Styles */
+/* All styles within this section of the document style the structure of the document. */
+/* Below, the selector is specifying what elements within the HTML document will be styled with the properties describes within. This selector is stating that the entire HTMl document will have a background of the specified color. */
 html {
     background-color: rgb(173, 189, 227);
 }
 
+/* Similar to above, the code below is stating that all properties within the brackets will style the body in the document. Since this selector has a different background color within it, it overwrites the background color specified before as it is more specific. The font family property within this selector tells the browser what font the text written in the body should be in.  */
 body {
     background-color: rgb(227, 210, 173);
     font-family: ‘Century Gothic’, sans-serif;
 }
 
+/* This selector provides properties taht will be applied to the footer element within the HTML document. Similar to before, the background color specified here overwrtites what was established before. The padding properites within the selector define the amount of padding that should surround the text around, in this case only putting space above and below the text.*/
 footer {
     background-color: rgb(208, 184, 109);
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
+/* This selector defines properties for the address element in the HTML document. The font size property specifies the size of the font within the address. The text align property states that the text should be aligned in the center horizontally. The font style property allows you to style the text or in this case, remove any styles that the text may have had before. */
 address {
-    font-style: none;
     font-size: 0.9em;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-style: normal;
 }
 
 /* Heading Styles */
+/* Styles within the this section are applied to the headings within the document. */
+/* The selectors below specifies styes for both h1 and h2 elements within the document. In this case, the selector specifies that the font-weight of both these elements should be normal. The font weight property specifies the weight or thickness of the text specified.*/
 h1,
 h2 {
     font-weight: normal;
 }
 
-
 /* Navigation Styles */
+/* Styles within this section are applied to the navigation of the HTML document. */
+/* This selector specifies that properties written wihtin will affecr the ul which is nested within the nav. The list-style-type property written specifies the type of bullet that will be used within the list, in this case stating that none will be used within the list. The line heigth property states that spacing that should be placed between lines.  */
 nav>ul {
     list-style-type: none;
     line-height: 2em;
     font-size: 0.9em;
 }
 
+/* The selector within this block of code states specifies that properties written will affect the anchor element nested within the list element which is nested within the unordered list element which is nested within the navigation element. The :link and :visited attached to the selector specify which states of the link will be affected by the properties within. The text decoration property applies decoration to text, in this case however it states that there should be no decoration thus removing the underline under the links.*/
 nav>ul>li>a:link,
 nav>ul>li>a:visited {
     text-decoration: none;
     color: rgb(43, 59, 125);
 }
 
+/* The comment above applies to this section of code as well though specifying different states of the link than above. The property within the selecor state that the color of the text should become red when the links are in the :active or :hover state.  */
 nav>ul>li>a:active,
 nav>ul>li>a:hover {
     color: rgb(212, 35, 35);
 }
 
 /* Article Styles */
+/* Styles within this section  */
 article#tour_summary h1 {
     font-size: 2.2em;
     letter-spacing: 0.2em;
@@ -72,7 +84,10 @@ article#tour_summary p {
     font-size: 1.1em;
 }
 
-element:first-of-type
+article#tour_summary p:first-of-type::first-line {
+    font-size: 1.2em;
+    font-variant: small-caps;
+}
 
 /* Aside Styles */
 aside#tour_itinerary h1 {
@@ -92,6 +107,14 @@ aside p:nth-of-type(odd) {
 }
 
 aside p:nth-of-type(even) {
+    color: rgb(81, 95, 175);
+}
+
+aside h2:nth-of-type(odd) {
+    color: rgb(79, 91, 40);
+}
+
+aside h2:nth-of-type(even) {
     color: rgb(81, 95, 175);
 }
 
