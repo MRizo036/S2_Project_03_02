@@ -74,22 +74,27 @@ nav>ul>li>a:hover {
 }
 
 /* Article Styles */
-/* Styles within this section  */
+/* Styles within this section are applied to the article element within the HTML document.*/
+/* The selector below states that styles within will be applied to the h1 elements nested within article elements that are followed by the ID of #tour_summary. This font size property specifies the size of the text int eh h1 element. The letter spacing property states the amount of spacing that  should be palced in between the letter of the words in the h1 element*/
 article#tour_summary h1 {
     font-size: 2.2em;
     letter-spacing: 0.2em;
 }
 
+/* The selctor is similar to the one above, the only change being that it affects the paragraph element in the HTML document rather tha the h1 element. */
 article#tour_summary p {
     font-size: 1.1em;
 }
 
+/* The selector states that properties within will affect the first line of the first paragraph of the paragraph element nested within the article element containing the ID of #tour_summary. te font variant property specifies hw the font should look, in this case making the text small caps.  */
 article#tour_summary p:first-of-type::first-line {
     font-size: 1.2em;
     font-variant: small-caps;
 }
 
 /* Aside Styles */
+/* Styles within this section are applied to the aside elements within the HTMl document. */
+/* The selector below is similar to the first two selectors in the article section, the only difference being that these selector will affect elements with the #tour_itinerary ID instead of the #tour_summary ID. This applies to the next three selectors below.*/
 aside#tour_itinerary h1 {
     font-size: 1.2em;
 }
@@ -102,14 +107,17 @@ aside#tour_itinerary p {
     font-size: 0.8em;
 }
 
+/* The selector below states that the odd paragraph elements nested within the aside elements in the HTMl documents will be styled by the properties below. The property below specifies that the color of the text will be that of the one provided within the property.  */
 aside p:nth-of-type(odd) {
     color: rgb(79, 91, 40);
 }
 
+/* The comment above applies to this selector and property as weel, the only difference being that this selector and proprties will be applied to the even paragraphs nested inside the aside elements. */
 aside p:nth-of-type(even) {
     color: rgb(81, 95, 175);
 }
 
+/* The selector below does the same as the previous two, though now affecting the h2 elements nested within the aside elements. */
 aside h2:nth-of-type(odd) {
     color: rgb(79, 91, 40);
 }
@@ -120,13 +128,15 @@ aside h2:nth-of-type(even) {
 
 
 /* Blockquote Styles */
-
+/* Styles within this section will be applied to the bodyqute elements within the HTML document.  */
+/* The selector below states that the properties within will be applied to the blockquote elements in the HTMl document. Similar to what the the background color properties above in the body selector, the background color property in this selector overwrites the color with the one spacified below. The same applies to the color selector in the selector. The opacity property within the selector states how solid the color of the text will appear.*/
 blockquote {
     background-color: rgb(173, 189, 227);
     color: rgb(255, 255, 255);
     opacity: 0.65;
 }
 
+/* The selector below states that the properties within will affect the paragraph elements nested within the blockquote elements. The padding property defines the amount of paddin that should be placed around the text.  */
 blockquote>p {
     padding: 2.5px 10px 2.5px 10px;
 }
